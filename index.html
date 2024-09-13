@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bulma Components</title>
+    <!-- 👇 Include Bulma CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css"
+    />
+    <link rel="stylesheet" href="css/styles.css" />
+    <!-- Include the JS modules -->
+    <script defer type="module" src="js/init.js"></script>
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar is-primary">
+      <div class="navbar-brand">
+        <a class="navbar-item" href="#">
+          <h1 class="title has-text-white">My Bulma App</h1>
+        </a>
+      </div>
+      <div class="navbar-end">
+        <div class="navbar-item">
+          <div class="field">
+            <p class="control has-icons-left">
+              <input class="input" type="text" placeholder="Search" />
+              <span class="icon is-left">
+                <i class="fas fa-search"></i>
+              </span>
+            </p>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Modals Section -->
+    <section id="modals" class="section">
+      <div class="container">
+        <h1 class="title">Modals</h1>
+        <button id="showModal" class="button is-primary">Show Modal</button>
+        <div class="modal">
+          <div class="modal-background"></div>
+          <div class="modal-content">
+            <div class="box">
+              <p>This is a modal box.</p>
+            </div>
+          </div>
+          <button class="modal-close is-large" aria-label="close"></button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Tabs Section -->
+    <section id="tabs" class="section">
+      <div class="container">
+        <h1 class="title">Food Tabs</h1>
+        <div class="tabs is-boxed">
+          <ul>
+            <li class="is-active" data-target="content1"><a>Tab 1</a></li>
+            <li data-target="content2"><a>Tab 2</a></li>
+            <li data-target="content3"><a>Tab 3</a></li>
+          </ul>
+        </div>
+        <div id="tab-content">
+          <div id="content1">
+            <p>This is the content for Tab 1 🍔.</p>
+          </div>
+          <div id="content2" class="is-hidden">
+            <p>This is the content for Tab 2 🍦.</p>
+          </div>
+          <div id="content3" class="is-hidden">
+            <p>This is the content for Tab 3 🍟.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Dropdown Section -->
+    <section id="dropdown" class="section">
+      <div class="container">
+        <h1 class="title">Dropdown</h1>
+        <div class="dropdown">
+          <div class="dropdown-trigger">
+            <button
+              class="button"
+              aria-haspopup="true"
+              aria-controls="dropdown-menu"
+            >
+              <span>Dropdown button</span>
+              <span class="icon is-small">
+                <i class="fas fa-angle-down" aria-hidden="true"></i>
+              </span>
+            </button>
+          </div>
+          <div class="dropdown-menu" id="dropdown-menu" role="menu">
+            <div class="dropdown-content">
+              <a href="#" class="dropdown-item">Dropdown item</a>
+              <a href="#" class="dropdown-item">Other dropdown item</a>
+              <a href="#" class="dropdown-item is-active"
+                >Active dropdown item</a
+              >
+              <a href="#" class="dropdown-item">With a divider</a>
+              <hr class="dropdown-divider" />
+              <a href="#" class="dropdown-item">One more item</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Table Section -->
+    <section id="table" class="section">
+      <div class="container">
+        <h1 class="title">Table</h1>
+        <table class="table is-striped is-fullwidth">
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Age</th>
+              <th>Job</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>John Petrucci</td>
+              <td>29</td>
+              <td>Engineer</td>
+            </tr>
+            <tr>
+              <td>Tori Amos</td>
+              <td>32</td>
+              <td>Designer</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- Media Section -->
+    <section id="media" class="section">
+      <div class="container">
+        <h1 class="title">Media</h1>
+        <article class="media">
+          <figure class="media-left">
+            <p class="image is-64x64">
+              <img src="https://via.placeholder.com/64" />
+            </p>
+          </figure>
+          <div class="media-content">
+            <div class="content">
+              <p>
+                <strong>John Petrucci</strong> <small>@johnpetrucci</small>
+                <br />
+                Lorem ipsum dolor sit amet, adipiscing consequat adipiscing sit
+                amet. Ornabo magnum orbem.
+              </p>
+            </div>
+          </div>
+          <div class="media-right">
+            <button class="delete"></button>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- Cards Section -->
+    <section id="cards" class="section">
+      <div class="container">
+        <h1 class="title">Cards</h1>
+        <div class="columns">
+          <div class="column">
+            <div class="card">
+              <div class="card-image">
+                <figure class="image is-4by3">
+                  <img
+                    src="https://via.placeholder.com/400x300"
+                    alt="Placeholder image"
+                  />
+                </figure>
+              </div>
+              <div class="card-content">
+                <div class="media">
+                  <div class="media-left">
+                    <figure class="image is-48x48">
+                      <img
+                        src="https://via.placeholder.com/96x96"
+                        alt="Placeholder image"
+                      />
+                    </figure>
+                  </div>
+                  <div class="media-content">
+                    <p class="title is-4">John Smith</p>
+                    <p class="subtitle is-6">@johnsmith</p>
+                  </div>
+                </div>
+                <div class="content">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                  Phasellus nec iaculis mauris.
+                  <a>@bulmaio</a>.<a>#css</a> <a>#responsive</a>
+                  <br />
+                  <time datetime="2021-1-1">11:09 PM - 1 Jan 2021</time>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="column">
+            <div class="card">
+              <div class="card-image">
+                <figure class="image is-4by3">
+                  <img
+                    src="https://via.placeholder.com/400x300"
+                    alt="Placeholder image"
+                  />
+                </figure>
+              </div>
+              <div class="card-content">
+                <div class="media">
+                  <div class="media-left">
+                    <figure class="image is-48x48">
+                      <img
+                        src="https://via.placeholder.com/96x96"
+                        alt="Placeholder image"
+                      />
+                    </figure>
+                  </div>
+                  <div class="media-content">
+                    <p class="title is-4">Jane Doe</p>
+                    <p class="subtitle is-6">@janedoe</p>
+                  </div>
+                </div>
+                <div class="content">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                  Phasellus nec iaculis mauris.
+                  <a>@bulmaio</a>.<a>#css</a> <a>#responsive</a>
+                  <br />
+                  <time datetime="2021-1-1">11:09 PM - 1 Jan 2021</time>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="column">
+            <div class="card">
+              <div class="card-image">
+                <figure class="image is-4by3">
+                  <img
+                    src="https://via.placeholder.com/400x300"
+                    alt="Placeholder image"
+                  />
+                </figure>
+              </div>
+              <div class="card-content">
+                <div class="media">
+                  <div class="media-left">
+                    <figure class="image is-48x48">
+                      <img
+                        src="https://via.placeholder.com/96x96"
+                        alt="Placeholder image"
+                      />
+                    </figure>
+                  </div>
+                  <div class="media-content">
+                    <p class="title is-4">Alice Johnson</p>
+                    <p class="subtitle is-6">@alicejohnson</p>
+                  </div>
+                </div>
+                <div class="content">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                  Phasellus nec iaculis mauris.
+                  <a>@bulmaio</a>.<a>#css</a> <a>#responsive</a>
+                  <br />
+                  <time datetime="2021-1-1">11:09 PM - 1 Jan 2021</time>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>
